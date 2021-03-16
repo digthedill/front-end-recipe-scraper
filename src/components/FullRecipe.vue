@@ -86,7 +86,7 @@ export default {
 .recipe-container {
   margin-top: 1rem;
   min-height: 100vh;
-  background-color: #f0e2d050;
+  background-color: #f0e2d0b4;
   background-image: -webkit-linear-gradient(70deg, #62959c 50%, #f0e2d0 50%);
   padding: 0.8rem;
   p & li {
