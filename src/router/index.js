@@ -1,34 +1,34 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import FullRecipe from "../components/FullRecipe.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import FullRecipe from '../components/FullRecipe.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home,
   },
   {
-    path: "/recipes",
-    name: "Recipes",
+    path: '/recipes',
+    name: 'Recipes',
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Recipes.vue"),
+      import(/* webpackChunkName: "about" */ '../views/Recipes.vue'),
   },
   {
-    path: "/recipes/:id",
-    name: "full recipe",
+    path: '/recipes/:id',
+    name: 'full recipe',
     component: FullRecipe,
   },
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
-});
+})
 
 // router.beforeEach((to, from, next) => {
 //   const authenticatedUser = null;
@@ -40,4 +40,4 @@ const router = new VueRouter({
 //   }
 // });
 
-export default router;
+export default router
