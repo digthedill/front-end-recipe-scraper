@@ -11,11 +11,12 @@
           <br /><br />
         </div>
         <div class="img-container col-sm">
-          <img
+          <b-img
             :src="fullRecipe.image"
             :alt="fullRecipe.title"
-            class="img-fluid rounded main-img"
-          />
+            fluid
+            class="rounded main-img"
+          ></b-img>
         </div>
       </div>
       <hr />
