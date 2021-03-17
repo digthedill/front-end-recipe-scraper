@@ -26,6 +26,11 @@ export default {
     Auth,
     ChefSvg,
   },
+  data() {
+    return {
+      onRender: true,
+    }
+  },
 }
 </script>
 

@@ -7,42 +7,46 @@
     >
       <span class="sr-only"></span>
     </div>
-    <div
-      class="row display-flex row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
-      v-if="!isLoading"
-    >
-      <div
-        v-for="(recipe, i) in userRecipes"
-        :key="i"
-        class="col-xs-6 col-md-4"
-      >
-        <!-- standarized card component -->
-        <div class="card card-component">
-          <router-link
-            v-if="typeof recipe.id !== 'undefiend'"
-            :to="{
-              name: 'full recipe',
-              path: `/recipes/${recipe.id}`,
-              params: { recipe, recipeReference },
-            }"
+    <transition name="fade">
+      <div v-if="userId.length > 0">
+        <div
+          class="row display-flex row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
+          v-if="!isLoading"
+        >
+          <div
+            v-for="(recipe, i) in userRecipes"
+            :key="i"
+            class="col-xs-6 col-md-4"
           >
-            <div class="">
-              <div class="card-body">
-                <h5 class="card-title">{{ recipe.title }}</h5>
-              </div>
-              <div class="img-wrapper">
-                <img
-                  :src="recipe.image"
-                  class="card-img-top embed-responsive-item image rounded"
-                  id="image-square"
-                  :alt="recipe.title"
-                />
-              </div>
+            <!-- standarized card component -->
+            <div class="card card-component">
+              <router-link
+                v-if="typeof recipe.id !== 'undefiend'"
+                :to="{
+                  name: 'full recipe',
+                  path: `/recipes/${recipe.id}`,
+                  params: { recipe, recipeReference },
+                }"
+              >
+                <div class="">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                  </div>
+                  <div class="img-wrapper">
+                    <img
+                      :src="recipe.image"
+                      class="card-img-top embed-responsive-item image rounded"
+                      id="image-square"
+                      :alt="recipe.title"
+                    />
+                  </div>
+                </div>
+              </router-link>
             </div>
-          </router-link>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -130,5 +134,14 @@ export default {
 }
 a {
   text-decoration: none;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
