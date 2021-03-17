@@ -13,9 +13,9 @@
         v-if="uid.length === 0"
       />
       <p class="about-the-app" v-if="uid.length === 0">
-        Dill's Recipe Scrapper allows you to save your favorite recipes that are
+        Dill's Recipe Scraper allows you to save your favorite recipes that are
         scattered across the web. After you log in, all you need to do is paste
-        in the url of your favorite recipe. DR Scrapper will save the recipe
+        in the url of your favorite recipe. DR Scraper will save the recipe
         right here in the app, and it will be ready to go whenever you come
         back!
       </p>

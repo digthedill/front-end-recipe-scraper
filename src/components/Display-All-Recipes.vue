@@ -33,7 +33,7 @@
               <div class="img-wrapper">
                 <img
                   :src="recipe.image"
-                  class="card-img-top embed-responsive-item rounded"
+                  class="card-img-top embed-responsive-item image rounded"
                   id="image-square"
                   :alt="recipe.title"
                 />
@@ -121,8 +121,12 @@ export default {
   padding: 0.7rem;
 }
 #image-square {
-  max-height: 14rem;
+  max-height: 10rem;
+  height: 100% !important;
   object-fit: cover;
+}
+.image {
+  height: 100% !important;
 }
 a {
   text-decoration: none;

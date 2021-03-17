@@ -1,6 +1,6 @@
 <template>
   <div class="home-wrapper">
-    <h1 class="title">Dill's Recipe Scrapper</h1>
+    <h1 class="title">Dill's Recipe Scraper</h1>
     <p class="subtitle">
       A home for your favorite recipes from across the internet
     </p>
@@ -44,7 +44,7 @@ export default {
   }
 }
 .home-content {
-  background: #f4f4f4d7;
+  background: #f0e2d0;
   padding: 2rem 1rem;
   margin: 2rem;
 }

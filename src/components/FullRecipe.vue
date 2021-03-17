@@ -1,6 +1,6 @@
 <template>
   <div class="recipe-container">
-    <div class="container p-2">
+    <div class="container p-2 my-recipe">
       <div class="row align-items-center">
         <div class="title-description col-sm">
           <h2>{{ fullRecipe.title }}</h2>
@@ -93,6 +93,10 @@ export default {
     letter-spacing: 0.1rem;
     line-height: 2rem;
   }
+}
+
+.container {
+  background-color: #f0e2d0 !important;
 }
 .recipe-how-to {
   text-align: left;
